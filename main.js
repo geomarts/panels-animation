@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
         ease: Power2.easeOut,
     })
         .to(
-            ".panels .panel:nth-child(2), .panels .panel:nth-child(3), .panels .panel:nth-child(4), .panel:nth-child(5)",
+            ".panels .panel:nth-child(n+2), .panels .panel:nth-child(-n+5)",
             { scaleY: 1, duration: 0.5, ease: Power2.easeOut },
             "-=0.5"
         )
