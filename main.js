@@ -1,29 +1,30 @@
-window.addEventListener("load", function () {
-    const tl = gsap.timeline();
-
-    tl.to(".panels .panel:nth-child(1), .panel:nth-child(6)", {
-        scaleY: 1,
-        duration: 1,
-        ease: Power2.easeOut,
+const tl = gsap.timeline();
+tl.pause();
+tl.to(".panels .panel:first-child, .panels .panel:last-child", {
+    scaleY: 1,
+    duration: 1,
+})
+    .to(
+        ".panels .panel:nth-child(n+2), .panels .panel:nth-child(-n+5)",
+        { scaleY: 1, duration: 0.5, ease: "power2.out" },
+        "-=0.5"
+    )
+    .to(".panels .panel", {
+        scaleY: 0,
+        duration: 0.3,
+        stagger: 0.05,
+        ease: "power2.out",
     })
-        .to(
-            ".panels .panel:nth-child(n+2), .panels .panel:nth-child(-n+5)",
-            { scaleY: 1, duration: 0.5, ease: Power2.easeOut },
-            "-=0.5"
-        )
-        .to(".panels .panel", {
-            scaleY: 0,
-            duration: 0.3,
-            stagger: 0.05,
-            ease: Power2.easeOut,
-        })
-        .to(".panels", { autoAlpha: 0, duration: 0.3 })
-        .to(
-            ".main-content",
-            {
-                clipPath: "circle(100%)",
-                duration: 1,
-            },
-            "-=.3"
-        );
+    .to(".panels", { autoAlpha: 0, duration: 0.3 })
+    .to(
+        ".main-content",
+        {
+            clipPath: "circle(100%)",
+            duration: 1,
+        },
+        "-=.3"
+    );
+
+window.addEventListener("load", function () {
+    tl.play();
 });

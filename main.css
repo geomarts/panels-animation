@@ -1,3 +1,5 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
     --panel-width: calc(100% / 6);
     --darkblue: #02020c;
@@ -33,26 +35,28 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-header {
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
     position: fixed;
     top: 30px;
     right: 50px;
     z-index: 1;
 }
 
-header ul {
+.page-header ul {
     display: grid;
     grid-column-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 }
 
-header ul a {
+.page-header ul a {
     display: inline-block;
     padding: 4px 8px;
     border: 1px solid transparent;
 }
 
-header .active a {
+.page-header .active a {
     border-color: var(--white);
 }
 
@@ -93,21 +97,49 @@ header .active a {
 }
 
 .panels .panel:nth-child(2) {
-    left: var(--panel-width);
+    left: calc(var(--panel-width) - 1px);
 }
 
 .panels .panel:nth-child(3) {
-    left: calc(calc(var(--panel-width) * 2) - 1px);
+    left: calc(calc(var(--panel-width) * 2) - 2px);
 }
 
 .panels .panel:nth-child(4) {
-    left: calc(calc(var(--panel-width) * 3) - 2px);
+    left: calc(calc(var(--panel-width) * 3) - 4px);
 }
 
 .panels .panel:nth-child(5) {
-    left: calc(calc(var(--panel-width) * 4) - 3px);
+    left: calc(calc(var(--panel-width) * 4) - 5px);
 }
 
 .panels .panel:nth-child(6) {
-    left: calc(calc(var(--panel-width) * 5) - 4px);
+    left: calc(calc(var(--panel-width) * 5) - 6px);
+}
+
+@media (max-width: 1024px) {
+    .panels {
+        width: 200vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .panels {
+        width: 230vw;
+    }
+}
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.page-footer a {
+    margin-left: 4px;
 }

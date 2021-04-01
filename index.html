@@ -2,14 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Simple Panels Animation With GSAP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
         <link rel="stylesheet" href="main.css">
+        <title>Simple Panels Animation With GSAP</title>
     </head>
 
     <body>
-        <header>
+        <header class="page-header">
             <nav>
                 <ul>
                     <li class="active">
@@ -37,6 +38,13 @@
             <div class="panel"></div>
             <div class="panel"></div>
         </div>
+
+        <footer class="page-footer">
+            <span>made by </span>
+            <a href="https://georgemartsoukos.com/" target="_blank">
+              <img width="24" height="24" src="https://assets.codepen.io/162656/george-martsoukos-small-logo.svg" alt="George Martsoukos logo">
+            </a>
+          </footer>
         
         <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
         <script src="main.js"></script>
