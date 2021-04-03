@@ -1,5 +1,4 @@
-const tl = gsap.timeline();
-tl.pause();
+const tl = gsap.timeline({ paused: true });
 tl.to(".panels .panel:first-child, .panels .panel:last-child", {
     scaleY: 1,
     duration: 1,
@@ -24,7 +23,7 @@ tl.to(".panels .panel:first-child, .panels .panel:last-child", {
         },
         "-=.3"
     );
-
+//console.log(tl.duration());
 window.addEventListener("load", function () {
     tl.play();
 });
