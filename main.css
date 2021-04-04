@@ -27,12 +27,10 @@ h1 {
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
     height: 100vh;
     font-family: "Montserrat", sans-serif;
+    color: var(--white);
+    overflow: hidden;
 }
 
 /* MAIN STYLES
@@ -60,16 +58,6 @@ body {
     border-color: var(--white);
 }
 
-.main-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(20%);
-    background: var(--darkblue);
-}
-
 .panels {
     position: fixed;
     top: 0;
@@ -77,6 +65,8 @@ body {
     width: 180vw;
     height: 100%;
     transform: translateX(-50%) skew(-35deg);
+    clip-path: circle(100%);
+    z-index: 1;
     background: var(--lightgray);
 }
 
@@ -86,10 +76,9 @@ body {
     left: 0;
     bottom: 0;
     width: var(--panel-width);
-    background: var(--darkblue);
-    transform-origin: top;
     transform: scaleY(0);
-    z-index: 1;
+    transform-origin: top;
+    background: var(--darkblue);
 }
 
 .panels .panel:nth-child(even) {
@@ -114,6 +103,19 @@ body {
 
 .panels .panel:nth-child(6) {
     left: calc(calc(var(--panel-width) * 5) - 6px);
+}
+
+.page-main {
+    display: flex;
+    height: 100%;
+    padding: 100px 15px;
+    clip-path: circle(20%);
+    overflow-y: auto;
+    background: var(--darkblue);
+}
+
+.page-main > div {
+    margin: auto;
 }
 
 @media (max-width: 1024px) {
