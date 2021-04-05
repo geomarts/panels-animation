@@ -1,8 +1,8 @@
-### Tuts+ Tutorial: How to Build a Simple Panels Animation With GSAP
+### Tuts+ Tutorial: Build a Simple Page Loading Animation With GSAP
 
 #### Instructor: George Martsoukos
 
-In this tutorial, we'll learn how to animate panels with GSAP, one of the most popular JavaScript animation libraries.
+In this tutorial, we'll learn how to create a simple page loading animation with GSAP, one of the most dominant and popular JavaScript animation libraries out there.
 
 **Available on Tuts+ April 2021**
 
