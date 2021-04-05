@@ -16,7 +16,7 @@ tl.to(".panels .panel:first-child, .panels .panel:last-child", {
     })
     .to(".panels", {
         clipPath: "circle(0%)",
-        skewX: "0deg",
+        skewX: 0,
         duration: 1,
     })
     .to(
