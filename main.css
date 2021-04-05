@@ -115,6 +115,7 @@ body {
 }
 
 .page-main > div {
+    text-align: center;
     margin: auto;
 }
 
